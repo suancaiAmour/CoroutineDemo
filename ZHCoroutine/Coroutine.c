@@ -41,7 +41,6 @@ extern void pushCoroutineEnv(int *regEnv);
 extern void popCoroutineEnv(int *regEnv);
 extern void *getSP(void);
 extern void *getFP(void);
-extern void blAddress(void *address);
 
 static threadInfo threadMap;
 pthread_rwlock_t rwlock = PTHREAD_RWLOCK_INITIALIZER;
