@@ -139,6 +139,9 @@ void coroutine_release(void)
 
 static inline void memcpy2stack(void *dest, void *src, long count)
 {
+    // TODO: 后续可以使用寄存器代替
+    // 为什么不用 register
+    // 经测试编译器会对 register 变量进行优化，实际上存储到栈上了。
     static char *tmp = NULL;
     static char *s = NULL;
     static long repeatCount = 0;
